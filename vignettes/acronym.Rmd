@@ -1,0 +1,77 @@
+---
+title: "acronym"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{acronym}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+The `acronym` package comes with built-in functionality to recognize the fields from your reference manager, so you can recognize your acronyms in the text more precisely. Currently, the following managers are supported:
+
+* Zotero
+* Endnote
+* Mendeley
+
+The way it works:
+
+```{r setup}
+library(acronym)
+
+find_acronyms(path = system.file("zotero.docx", package = "acronym"), ref_manager = "zotero")
+```
+
+## Delimiter
+
+You can set delimiters to limit the search between two headings only. The default values for this are `Introduction` and `References`. You can of course modify these headings, and if you wish to ignore them you can simply set `demileter = NULL`.
+
+```{r}
+find_acronyms(
+  path = system.file("zotero.docx", package = "acronym"), 
+  delimiter = c("Introduction", "References"),
+  ref_manager = "zotero"
+)
+```
+
+### Without delimiters
+
+```{r}
+find_acronyms(
+  path = system.file("zotero.docx", package = "acronym"), 
+  delimiter = NULL,
+  ref_manager = "zotero"
+)
+```
+
+## Custom regex
+
+If you would like to try another regex to identify the references fields in the text you can simply do:
+
+```{r}
+find_acronyms(
+  path = system.file("zotero.docx", package = "acronym"), 
+  delimiter = NULL,
+  ref_manager = "custom",
+  custom_regex = "ADDIN ZOTERO.*?json"
+)
+```
+
+
+## Alphabetical order or order of appearance in text
+
+By default, the function is going to retrieve the list in alphabetical order. If you need to have it in order of appearance, just set `sort = FALSE`.
+
+```{r}
+find_acronyms(
+  path = system.file("zotero.docx", package = "acronym"), 
+  ref_manager = "zotero",
+  sort = FALSE
+)
+```

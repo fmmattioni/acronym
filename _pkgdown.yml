@@ -1,0 +1,33 @@
+destination: docs
+
+template:
+  params:
+    bootswatch: lumen
+    ganalytics: UA-126092763-1
+
+authors:
+  Felipe Mattioni Maturana:
+    href: https://fmattioni.me
+
+toc:
+  depth: 3
+
+development:
+  mode: unreleased
+
+navbar:
+  title: ~
+  type: default
+  right:
+  - icon: fa-github fa-lg
+    href: https://github.com/fmmattioni/acronym
+  - icon: fa-twitter fa-lg
+    href: https://twitter.com/felipe_mattioni
+
+reference:
+- title: Find acronyms
+  desc: >
+    Tools for finding acronyms in a Word document
+  contents:
+  - find_acronyms
+  - regex_acronyms
