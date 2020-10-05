@@ -9,6 +9,8 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/acronym)](https://CRAN.R-project.org/package=acronym)
+[![R build
+status](https://github.com/fmmattioni/acronym/workflows/R-CMD-check/badge.svg)](https://github.com/fmmattioni/acronym/actions)
 <!-- badges: end -->
 
 The goal of `acronym` is to help finding acronyms in a Word document so
