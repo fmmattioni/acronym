@@ -46,7 +46,10 @@ find_acronyms(path = system.file("zotero.docx", package = "acronym"), ref_manage
 knitr::include_graphics("man/figures/demo.gif")
 ```
 
-Got any ideas and/or tips for improving the code? Feel free to open an issue or submit a PR!
+
+## The way it works
+
+`acronym` is going to search only for acronyms in your manuscript that are between brackets. Please, note that this is still experimental, so ultimately you should double-check the list of abbreviations retrieved. Got any ideas and/or tips for improving the code? Feel free to open an issue or submit a PR!
 
 ## Code of Conduct
 

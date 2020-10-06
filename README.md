@@ -46,6 +46,11 @@ knitr::include_graphics("man/figures/demo.gif")
 
 <img src="man/figures/demo.gif" width="100%" />
 
+## The way it works
+
+`acronym` is going to search only for acronyms in your manuscript that
+are between brackets. Please, note that this is still experimental, so
+ultimately you should double-check the list of abbreviations retrieved.
 Got any ideas and/or tips for improving the code? Feel free to open an
 issue or submit a PR\!
 
